@@ -25,7 +25,9 @@ class _HomePageScreenState extends State<HomePageScreen> {
   @override
   void initState() {
     super.initState();
-    homeController.courseListApi();
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      Get.find<HomeController>().courseListApi();
+    });
   }
 
   @override
@@ -34,7 +36,7 @@ class _HomePageScreenState extends State<HomePageScreen> {
       backgroundColor: const Color(0xFF7455F7),
       appBar: AppBar(
         leading: IconButton(
-          icon: const Icon(Icons.menu, color: Colors.white),
+          icon: const Icon(Icons.menu_outlined, color: Colors.white),
           onPressed: () {},
         ),
         title: const Text(
@@ -44,7 +46,7 @@ class _HomePageScreenState extends State<HomePageScreen> {
         centerTitle: true,
         actions: [
           IconButton(
-            icon: const Icon(Icons.shopping_cart, color: Colors.white),
+            icon: const Icon(Icons.shopping_cart_checkout_outlined, color: Colors.white),
             onPressed: () {},
           ),
         ],
