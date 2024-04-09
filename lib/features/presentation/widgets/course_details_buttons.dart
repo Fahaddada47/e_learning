@@ -2,20 +2,22 @@
 import 'package:flutter/material.dart';
 
 class CourseDetailsButtons extends StatelessWidget {
+  const CourseDetailsButtons({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
         Container(
-          width: double.infinity, // Full width
+          width: double.infinity,
           decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(8), // Circular radius
-            color: Colors.blue, // Blue color
+            borderRadius: BorderRadius.circular(8),
+            color: Colors.blue,
           ),
           child: ElevatedButton(
             onPressed: () {},
             style: ElevatedButton.styleFrom(
-              primary: Colors.transparent, // Transparent background
+              primary: Colors.transparent,
               elevation: 0, // No elevation
             ),
             child: const Padding(
@@ -23,7 +25,7 @@ class CourseDetailsButtons extends StatelessWidget {
               child: Text(
                 'Buy now',
                 style: TextStyle(
-                  color: Colors.white, // White text color
+                  color: Colors.white,
                   fontSize: 16,
                 ),
               ),
